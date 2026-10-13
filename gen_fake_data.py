@@ -31,8 +31,8 @@ composite_score = (
 
 # map through sigmoid function to get probability
 np.random.seed(67)
-noise = np.random.normal(0, 0.3, size=len(raw_df))
-z = 13.0 * (composite_score - 0.55) + noise
+noise = np.random.normal(0, 0.05, size=len(raw_df))
+z = 20.0 * (composite_score - 0.55) + noise
 prob_passed = 1.0 / (1.0 + np.exp(-z))
 
 # generate new passed column
